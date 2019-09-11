@@ -20,5 +20,61 @@ public class Calculate {
 		return (number1 + number2) / 2;
 		
 	}
+	
+	public static double average(double number1, double number2, double number3) {
+		return (number1 + number2 + number3) / 2;
+		
+	}
+	
+	public static double toDegrees(double radian1) {
+		return (radian1 * 180) / 3.14159;
+		
+	}
+	
+	public static double toRadians(double degree) {
+		return (degree * 3.14159) / 180;
+		
+	}
+	
+	public static double discriminant(double a, double b, double c) {
+		return (b * b) - (4 * a * c);
+	}
+	
+	public static String toImproperFract(int number, int numer, int denom) {
+		String answer = "0";
+		answer = number * denom + numer + "/" + denom;
+		return(answer);
+		
+	}
+	
+	public static String toMixedNum(int numer, int denom) {
+		String answer = "0";
+		answer = (numer / denom) % numer + "/" + denom;
+		return(answer);
+	
+	}
+	
+	public static String foil(int a, int b, int c, int d, String string) {
+		String answer = "0";
+		answer = (a * c) + string + "^2" + +(a * d) + string + "+" + (b * c) + string + + (b * d);
+		return(answer);
+	}
+	
+	public static boolean isDivisibleBy(int a, int b) {
+		return(a % b == 0);
+	}
+	
+	public static double absValue(double a) {
+		if(a >= 0) {
+			return(a);
+		} else {
+			return(a / -1);
+		}
+		
+	}
+
+
+	
+
 
 }
