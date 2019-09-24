@@ -18,6 +18,13 @@ public class DoMath {
 		System.out.println((Calculate.foil(2, 3, 6, -7, "n")));
 		System.out.println((Calculate.isDivisibleBy(2, 3)));
 		System.out.println((Calculate.absValue(-355556.0)));
+		System.out.println((Calculate.max(100, 100)));
+		System.out.println((Calculate.max(5, 6, 3)));
+		System.out.println((Calculate.round2(3.1415)));
+		System.out.println((Calculate.exponent(2, 4)));
+		System.out.println((Calculate.factorial(3)));
+		System.out.println((Calculate.isPrime(17)));
+		System.out.println((Calculate.sqrt(4)));
 	}
 
 }

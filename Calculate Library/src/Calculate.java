@@ -73,7 +73,7 @@ public class Calculate {
 		
 	}
 	
-	public static double max(double number1, double number2) {
+	public static double max(double number1, double number2) { //a cakk ti nax returns the larger of the values passed. accepts two doubles returns a double
 		if (number1 > number2) {
 			return(number1);
 		} if (number2 > number1) {
@@ -82,7 +82,7 @@ public class Calculate {
 		return(number1);
 		}
 		
-	public static double max(double number1, double number2, double number3) {
+	public static double max(double number1, double number2, double number3) { //call to this max (overload) returns the largest value of three values. accepts 3 doubles returns a double
 		if (number1 > number2) {
 			if (number1 >number3) {
 				return(number1);
@@ -99,7 +99,7 @@ public class Calculate {
 		return(number1);
 	}
 
-	public static int min(int number1, int number2) {
+	public static int min(int number1, int number2) { //call to min returns the smaller value for the values passed. accepts two ints and returns an int
 		if(number1 < number2) {
 			return(number1);
 		} if(number2 < number1) {
@@ -116,23 +116,17 @@ public class Calculate {
 	}
 
 	public static double exponent(double base, int power) { //figure this one oout
-		int repeat = power;
-		if(power == 0) {
-			return(1);
-		} while (power > 0; power ++;); {
-			return(base * base);
-		}
 		return(1);
 	}
 	
-	public static int factorial(int number) {
+	public static int factorial(int number) { //a call to factorial returns the factorial of the value passed. accepts and returns an int
 		while (number > 0) {
 			return(number * (number -1));
 		}
 		return(1);
 	}
 	
-	public static boolean isPrime(int number) {
+	public static boolean isPrime(int number) { //call to isPrime determines if an integer is prime. accepts an int and returns a boolean
 		int factor = 2;
 		if(isDivisibleBy(number, factor) == false) {
 			factor++;
@@ -148,6 +142,11 @@ public class Calculate {
 			
 		}
 		return(1);
+	}
+	
+	public static double sqrt(int number) { //gonna be honest here: idk
+		int div = number;
+		return(0.5 * (number / div) + div);
 	}
 }
 
