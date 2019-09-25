@@ -61,7 +61,11 @@ public class Calculate {
 	}
 	
 	public static boolean isDivisibleBy(int number, int factor) { //a call to isDivisibleBy returns a boolean based on whether the two values passed are evenly divisible. accepts 2 integers, returns a boolean
+		if(factor == 0) {
+			throw new IllegalArgumentException("cannot divide by 0");
+		}
 		return(number % factor == 0);
+
 	}
 	
 	public static double absValue(double number) { //a call to absValue returns the absolute value of the value passed. accepts and returns a double
@@ -116,12 +120,18 @@ public class Calculate {
 	}
 
 	public static double exponent(double base, int power) { //figure this one oout
+		if(base < 0) {
+			throw new IllegalArgumentException("no negative bases");
+		}
 		return(1);
 	}
 	
 	public static int factorial(int number) { //a call to factorial returns the factorial of the value passed. accepts and returns an int
 		while (number > 0) {
 			return(number * (number -1));
+		}
+		if (number < 0) {
+			throw new IllegalArgumentException("no negative factorials");
 		}
 		return(1);
 	}
@@ -146,7 +156,17 @@ public class Calculate {
 	
 	public static double sqrt(int number) { //gonna be honest here: idk
 		int div = number;
+		if(number < 0) {
+			throw new IllegalArgumentException("no square roots of negative numbers");
+		}
 		return(0.5 * (number / div) + div);
+	}
+	
+	public static String quadForm(int a, int b, int c) { //need round2 so uhhhhh
+		if(b == 0) {
+			System.out.println(c);
+		}
+		return("WTF");
 	}
 }
 
