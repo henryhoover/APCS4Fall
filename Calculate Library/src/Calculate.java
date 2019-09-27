@@ -112,28 +112,41 @@ public class Calculate {
 		return(number1);
 	}
 	
-	public static double round2(double number) { //how do u do this????
-		if(number != 0) {
-			return (number * 100) / 100;
-		}
-		return(number);
+	public static double round2(double number) { //we gottem
+		number = (number*100); 
+		number = (number+.5);
+		number = (int)number;
+		number = (number/100);
+		number = (double)number;
+		return number;	
 	}
 
-	public static double exponent(double base, int power) { //figure this one oout
-		if(base < 0) {
-			throw new IllegalArgumentException("no negative bases");
+	public static double exponent(double base, int power) { //mayhaps./????
+		if(power < 0) {
+			throw new IllegalArgumentException("no negative powers");
 		}
+		int repeats = 1;
+		while (repeats < power) {
+			power++;
+			return(base*base);
+	}
 		return(1);
 	}
 	
+	
 	public static int factorial(int number) { //a call to factorial returns the factorial of the value passed. accepts and returns an int
-		while (number > 0) {
-			return(number * (number -1));
-		}
+		int answer = number;
 		if (number < 0) {
 			throw new IllegalArgumentException("no negative factorials");
 		}
-		return(1);
+		if(number == 0) {
+			return(1);
+		}
+		for (answer = number -1; answer <= number; answer++) {
+			answer = answer / 1;
+
+		}
+		return(answer);
 	}
 	
 	public static boolean isPrime(int number) { //call to isPrime determines if an integer is prime. accepts an int and returns a boolean
@@ -146,16 +159,23 @@ public class Calculate {
 		}
 	}
 	
-	public static int gcf(int number1, int number2) { //uhhhhhhhhh
+	public static int gcf(int number1, int number2) { //lets find out
 
 		if(isPrime(number1 | number2) == false) {
-			
+			while(number1 != number2) {
+				if(number1 > number2) {
+					return(number1 - number2);
+				}
+				if(number1 < number2) {
+					return(number2 - number1);
+				}
+		}
 		}
 		return(1);
 	}
 	
-	public static double sqrt(int number) { //gonna be honest here: idk
-		int div = number;
+	public static double sqrt(int number) { //gonna be honest here: idk??
+		int div = number*number;
 		if(number < 0) {
 			throw new IllegalArgumentException("no square roots of negative numbers");
 		}
