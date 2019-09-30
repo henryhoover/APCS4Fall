@@ -49,7 +49,7 @@ public class Calculate {
 	
 	public static String toMixedNum(int numer, int denom) { //a call to toMixedNum returns an equivalent mixed number for the improper fraction passed. accepts 2 integers, returns a string
 		String answer = "0";
-		answer = (numer / denom) % numer + "/" + denom;
+		answer = (numer / denom)  + "_" +  (numer / denom) % denom + "/" + denom;
 		return(answer);
 	
 	}
@@ -77,7 +77,7 @@ public class Calculate {
 		
 	}
 	
-	public static double max(double number1, double number2) { //a cakk ti nax returns the larger of the values passed. accepts two doubles returns a double
+	public static double max(double number1, double number2) { //a call to max returns the larger of the values passed. accepts two doubles returns a double
 		if (number1 > number2) {
 			return(number1);
 		} if (number2 > number1) {
@@ -112,29 +112,48 @@ public class Calculate {
 		return(number1);
 	}
 	
-	public static double round2(double number) { //how do u do this????
-		if(number != 0) {
-			return (number * 100) / 100;
-		}
-		return(number);
+	public static double round2(double number) { //a call to round2 rounds a double to 2 decimal places. accepts and returns a double
+		number = (number * 100); 
+		number = (number + .5);
+		number = (int) number;
+		number = (number / 100);
+		number = (double) number;
+		return number;	
 	}
 
-	public static double exponent(double base, int power) { //figure this one oout
-		if(base < 0) {
-			throw new IllegalArgumentException("no negative bases");
+	public static double exponent(double base, int power) { //a call to exponent raises a value to the integer value. accepts double and integer, returns a double
+		if(power < 0) {
+			throw new IllegalArgumentException("no negative powers");
 		}
-		return(1);
+		if(power == 0) {
+			return(1);
+		}
+		int repeats = 1;
+		double answer = base;
+		while (repeats != power) {
+			answer = base * base;
+			repeats++;
+	}
+		return(answer);
+
 	}
 	
+	
 	public static int factorial(int number) { //a call to factorial returns the factorial of the value passed. accepts and returns an int
-		while (number > 0) {
-			return(number * (number -1));
-		}
+		int answer = number;
+		int mult = number -1;
 		if (number < 0) {
 			throw new IllegalArgumentException("no negative factorials");
 		}
-		return(1);
-	}
+		do {
+			answer = number;
+			mult = mult - 1;
+			return(answer);
+		} while (mult != 1);
+
+		}
+		
+	
 	
 	public static boolean isPrime(int number) { //call to isPrime determines if an integer is prime. accepts an int and returns a boolean
 		int factor = 2;
@@ -146,26 +165,37 @@ public class Calculate {
 		}
 	}
 	
-	public static int gcf(int number1, int number2) { //uhhhhhhhhh
+	public static int gcf(int number1, int number2) { //a call to gcf returns the greatest ccommon factor of the 2 values passed. accepts 2 integers, rerturns an int
+		int factor = 1;
+		double larger = max(number1, number2);
+		double smaller = min(number1, number2);
+		for (int i = 1; i <= (int)larger; i++) {
+			if (isDivisibleBy((int)larger, i) == true) {
+				if (isDivisibleBy((int)smaller, i) == true) {
+					factor = i;
+				}
+			}
+		}
+		return(factor);
+		}
 
-		if(isPrime(number1 | number2) == false) {
-			
-		}
-		return(1);
-	}
 	
-	public static double sqrt(int number) { //gonna be honest here: idk
-		int div = number;
-		if(number < 0) {
-			throw new IllegalArgumentException("no square roots of negative numbers");
+	public static double sqrt(double number) { //a call to sqrt returns the square root of the value passed (rounded to 2 decimal places). accecpts and returns an int
+		double answer = number / 2;
+		if (number < 0) {
+			throw new IllegalArgumentException("no negative square roots"); 
 		}
-		return(0.5 * (number / div) + div);
+		while (((answer * answer) - number) >= .005 || ((answer * answer) - number) <= -.005) {
+			answer = 0.5 * (number / answer + answer);
+		}
+		return round2(answer);
 	}
 	
 	public static String quadForm(int a, int b, int c) { //need round2 so uhhhhh
 		if(b == 0) {
-			System.out.println(c);
+			System.out.println(round2(c));
 		}
+		
 		return("WTF");
 	}
 }

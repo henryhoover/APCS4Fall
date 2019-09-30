@@ -1,5 +1,6 @@
 //HENRY WANG
 //8/29/19
+//4th period
 //CALL MATH METHODS FROM CALCULATE LIBRARY
 //CLIENT/RUNNER CODE
 
@@ -21,10 +22,12 @@ public class DoMath {
 		System.out.println((Calculate.max(100, 100)));
 		System.out.println((Calculate.max(5, 6, 3)));
 		System.out.println((Calculate.round2(3.1415)));
-		System.out.println((Calculate.exponent(2, 4)));
-		System.out.println((Calculate.factorial(3)));
+		System.out.println((Calculate.exponent(5, 3)));
+		System.out.println((Calculate.factorial(5)));
 		System.out.println((Calculate.isPrime(17)));
+		System.out.println((Calculate.round2(12.456)));
 		System.out.println((Calculate.sqrt(4)));
+		System.out.println((Calculate.gcf(121, 55)));
 	}
 
 }
