@@ -14,7 +14,7 @@ public class QuadraticClient { //still got srs issues
 		//welcome
 		System.out.println("Welcome to the Quadratic Describer");
 		//start loop
-				//ask input
+			//ask input
 			//read input
 			//call quadrdescriber and sendd input
 		System.out.println("Provide values for coefficients a, b, and c");

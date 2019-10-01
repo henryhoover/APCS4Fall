@@ -195,7 +195,11 @@ public class Calculate {
 		if(b == 0) {
 			System.out.println(round2(c));
 		}
-		
+		String answer = "0";
+		if(discriminant(a, b, c) == 0) {
+			answer = round2(-b / 2 * a);
+
+			return 		}
 		return("WTF");
 	}
 }
