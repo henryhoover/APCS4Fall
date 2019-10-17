@@ -80,10 +80,8 @@ public class Calculate {
 	public static double max(double number1, double number2) { //a call to max returns the larger of the values passed. accepts two doubles returns a double
 		if (number1 > number2) {
 			return(number1);
-		} if (number2 > number1) {
-			return(number2);
 		}
-		return(number1);
+		return (number2);
 		}
 		
 	public static double max(double number1, double number2, double number3) { //call to this max (overload) returns the largest value of three values. accepts 3 doubles returns a double
@@ -106,10 +104,8 @@ public class Calculate {
 	public static int min(int number1, int number2) { //call to min returns the smaller value for the values passed. accepts two ints and returns an int
 		if(number1 < number2) {
 			return(number1);
-		} if(number2 < number1) {
-			return(number2);
-		}
-		return(number1);
+		} 
+		return(number2);
 	}
 	
 	public static double round2(double number) { //a call to round2 rounds a double to 2 decimal places. accepts and returns a double
@@ -195,12 +191,15 @@ public class Calculate {
 		if(b == 0) {
 			System.out.println(round2(c));
 		}
-		String answer = "0";
-		if(discriminant(a, b, c) == 0) {
-			answer = round2(-b / 2 * a);
 
-			return 		}
-		return("WTF");
+		if(discriminant(a, b, c) == 0) {
+			System.out.println(round2((b * -1) / (2 *a)));	
+		}
+		
+		if(discriminant(a, b, c) > 0) {
+			System.out.println(round2(b * -1) + (sqrt(b * b - (4 * a * c))));
+		}
+		return("no real roots idk bro i fucked up");
 	}
 }
 

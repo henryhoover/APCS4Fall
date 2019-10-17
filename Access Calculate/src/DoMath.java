@@ -28,6 +28,7 @@ public class DoMath {
 		System.out.println((Calculate.round2(12.456)));
 		System.out.println((Calculate.sqrt(4)));
 		System.out.println((Calculate.gcf(121, 55)));
+		System.out.println((Calculate.quadForm(2, 1, 3)));
 	}
 
 }
