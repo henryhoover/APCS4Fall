@@ -40,7 +40,7 @@ public class Calculate {
 		return (b * b) - (4 * a * c);
 	}
 	
-	public static String toImproperFract(int number, int numer, int denom) { //a call to toImproperFract returns an equivalent improper fraction for the mixed number passed. accepts 3 integers, returns a string
+	public static String toImproperFrac(int number, int numer, int denom) { //a call to toImproperFract returns an equivalent improper fraction for the mixed number passed. accepts 3 integers, returns a string
 		String answer = "0";
 		answer = number * denom + numer + "/" + denom;
 		return(answer);
@@ -199,7 +199,7 @@ public class Calculate {
 		if(discriminant(a, b, c) > 0) {
 			System.out.println(round2(b * -1) + (sqrt(b * b - (4 * a * c))));
 		}
-		return("no real roots idk bro i fucked up");
+		return("no real roots");
 	}
 }
 

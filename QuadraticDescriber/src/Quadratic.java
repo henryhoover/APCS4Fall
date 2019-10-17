@@ -1,7 +1,7 @@
 //henry wang
 // 9/30/19
 //4th period
-//does the calculations to print out a description for the quadratic client
+//does the calculations to print out a description for the quadratic client	
 
 public class Quadratic { //we got srs issues
 	
@@ -76,7 +76,7 @@ public class Quadratic { //we got srs issues
 		}
 		return(number1);
 	}
-
+	
 	public static String quadrDescriber (double a, double b, double c) { //call to quadrDescriber creates the strings that are printed to QuadraticClient
 			System.out.println("Description of the graph of:");
 			System.out.println(a + "x^2" + b + "x" + c);
@@ -90,15 +90,9 @@ public class Quadratic { //we got srs issues
 			System.out.println("Axis of symmetry: " + c);
 			System.out.println("Vertex: (" + (b * -1) / (2 * a) + "," + c + ")");
 			System.out.println("x-intercept(s): " + quadForm(a, b, c));
-			System.out.println("y-intercept: " );
+			return("y-intercept: " + quadForm(0, 0, c));
 			
 				
 			
 	}
-		
-		
-		
-
 	}
-
-

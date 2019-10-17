@@ -36,10 +36,15 @@ public class QuadraticClient { //receives user input and calls quadratic to prin
 	} else {
 		System.out.println("Provide values for coefficients a, b, and c");
 		System.out.println("a: ");
+		a = userInput.nextDouble();
 		
 		System.out.println("b: ");
+		b = userInput.nextDouble();
 		
 		System.out.println("c: ");
+		c = userInput.nextDouble();
+		
+		description = Quadratic.quadrDescriber(a, b, c);
 
 	System.out.println(description);
 
