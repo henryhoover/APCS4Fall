@@ -30,9 +30,12 @@ public class QuadraticClient { //receives user input and calls quadratic to prin
 	System.out.println("Do you want to go again? (type \"no\" to quit)");
 	String no = userInput.next();
 	
+	while(no == userInput.next()) {
+		
 	if(no == "no") {
 		System.out.println("Alright, I'm about to head out.");
 		userInput.close();
+		
 	} else {
 		System.out.println("Provide values for coefficients a, b, and c");
 		System.out.println("a: ");
@@ -49,8 +52,10 @@ public class QuadraticClient { //receives user input and calls quadratic to prin
 	System.out.println(description);
 
 	System.out.println("Do you want to go again? (type \"no\" to quit)");
+	no = userInput.next();
 	}
 
 }
 	
+}
 }

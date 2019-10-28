@@ -2,12 +2,21 @@
 //10//10/19
 //period 4
 //code that prints the hourglass text art shape thing
+
 public class Hourglass {
 	
+	public static void String(String TopBottom) {
+		
+		System.out.println("|\"\"\"\"\"\"\"\"\"\"|");
+		
+	}
+	
 		public static void main(String[] args) {
-				
-			System.out.println("|\"\"\"\"\"\"\"\"\"\"|");
-
+			
+			String TopBottom = "|\"\"\"\"\"\"\"\"\"\"|";
+			
+				String(TopBottom);
+			
 			for(int line = 1; line <=4; line++) {
 				
 				for(int space = 0; space < line; space++) {
@@ -40,8 +49,7 @@ public class Hourglass {
 			System.out.println("\\");
 		}
 		
-		System.out.println("|\"\"\"\"\"\"\"\"\"\"|");
+		String(TopBottom);
 
-		
 }
 }

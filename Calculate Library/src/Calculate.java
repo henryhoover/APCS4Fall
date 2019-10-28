@@ -193,12 +193,13 @@ public class Calculate {
 		}
 
 		if(discriminant(a, b, c) == 0) {
-			System.out.println(round2((b * -1) / (2 *a)));	
+			return("Roots: " + round2((b * -1) / (2 *a)));	
 		}
 		
 		if(discriminant(a, b, c) > 0) {
-			System.out.println(round2(b * -1) + (sqrt(b * b - (4 * a * c))));
+			return("Roots: " + round2(b * -1) + (sqrt(b * b - (4 * a * c))));
 		}
+		
 		return("no real roots");
 	}
 }
