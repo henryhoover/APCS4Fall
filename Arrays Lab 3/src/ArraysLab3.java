@@ -30,8 +30,10 @@ public class ArraysLab3 {
 	
 	public static int[] append(int[] arr, int num) {
 
-		int[] answer = arr;
+		int[] answer = new int[arr.length + 1];
+		
 		answer[arr.length] = num;
+		
 		return(answer);
 		
 	}
@@ -42,12 +44,12 @@ public class ArraysLab3 {
 	 * (thus, the returned array has a length of arr.length – 1).  You can assume arr has at least two elements.
 	 */
 	
-	public static int[] remove(int[] arr, int idx) {
+	public static int[] remove(int[] arr, int idx) { //HELPL
 
-		int[] answer = new int[arr.length-1];
-		
-				
-		
+		int[] answer = new int [arr.length -1];
+		answer = arr;
+		return(answer);
+	
 	}
 	
 	/*
@@ -62,7 +64,7 @@ public class ArraysLab3 {
 
 		for(int i = 0; i < arr.length; i++) {
 			
-			if(arr[i] % 2 == 0) {
+			if(i % 2 == 0) {
 				
 				answer += arr[i];
 				
@@ -82,9 +84,13 @@ public class ArraysLab3 {
 	
 	public static void rotateRight(int[] arr) {
 
-		
-		
-	}
+		for(int i = 0; i <= arr.length; i++) {
+			
+			arr[i] += 1;
+								
+			}
+			
+		}
 	
 	/*
 	 * Write a method main that will 
@@ -112,15 +118,33 @@ a1
 
 	public static void main(String[] args) {
 		
-		int[] a1 = new int{5, 10, 15, 20, 25, 30, 35, 40};
+		int[] a1 = {5, 10, 15, 20, 25, 30, 35, 40};
 		
-		int[] a2 = new int{7, 14, 21, 28, 35, 42, 29, 56};
+		int[] a2 = {7, 14, 21, 28, 35, 42, 29, 56};
 		
 		int[] sumArr = sum(a1, a2);
 		
 		int appendNum = 200;
 		
+		int[] appendArr = append(a1, appendNum);
 		
+		int removeIdx = 5;
+		
+		int[] removeArr = remove(a2, removeIdx);
+		
+		int sumOfEvens = sumEven(appendArr);
+		
+		rotateRight(a1);
+		
+		System.out.println(Arrays.toString(sumArr));
+		
+		System.out.println(Arrays.toString(appendArr));
+		
+		System.out.println(Arrays.toString(removeArr));
+		
+		System.out.println(sumOfEvens);
+		
+		System.out.println(Arrays.toString(a1));
 
 	}
 

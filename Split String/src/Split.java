@@ -1,3 +1,8 @@
+//henry wang
+//10/30/19
+//period 4
+//split the string and print a description oft he filling 
+
 import java.util.Arrays;
 
 
