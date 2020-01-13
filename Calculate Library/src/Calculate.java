@@ -108,19 +108,33 @@ public class Calculate {
 		return(number2);
 	}
 	
+<<<<<<< HEAD
 	public static double round2(double number) { //a call to round2 rounds a double to 2 decimal places. accepts and returns a double
 		number = (number * 100); 
 		number = (number + .5);
 		number = (int) number;
 		number = (number / 100);
 		number = (double) number;
+=======
+	public static double round2(double number) { //we gottem
+		number = (number*100); 
+		number = (number+.5);
+		number = (int)number;
+		number = (number/100);
+		number = (double)number;
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 		return number;	
 	}
 
+<<<<<<< HEAD
 	public static double exponent(double base, int power) { //a call to exponent raises a value to the integer value. accepts double and integer, returns a double
+=======
+	public static double exponent(double base, int power) { //mayhaps./????
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 		if(power < 0) {
 			throw new IllegalArgumentException("no negative powers");
 		}
+<<<<<<< HEAD
 		if(power == 0) {
 			return(1);
 		}
@@ -132,15 +146,27 @@ public class Calculate {
 	}
 		return(answer);
 
+=======
+		int repeats = 1;
+		while (repeats < power) {
+			power++;
+			return(base*base);
+	}
+		return(1);
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 	}
 	
 	
 	public static int factorial(int number) { //a call to factorial returns the factorial of the value passed. accepts and returns an int
 		int answer = number;
+<<<<<<< HEAD
 		int mult = number -1;
+=======
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 		if (number < 0) {
 			throw new IllegalArgumentException("no negative factorials");
 		}
+<<<<<<< HEAD
 		do {
 			answer = number;
 			mult = mult - 1;
@@ -150,6 +176,17 @@ public class Calculate {
 		}
 		
 	
+=======
+		if(number == 0) {
+			return(1);
+		}
+		for (answer = number -1; answer <= number; answer++) {
+			answer = answer / 1;
+
+		}
+		return(answer);
+	}
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 	
 	public static boolean isPrime(int number) { //call to isPrime determines if an integer is prime. accepts an int and returns a boolean
 		int factor = 2;
@@ -161,6 +198,7 @@ public class Calculate {
 		}
 	}
 	
+<<<<<<< HEAD
 	public static int gcf(int number1, int number2) { //a call to gcf returns the greatest ccommon factor of the 2 values passed. accepts 2 integers, rerturns an int
 		int factor = 1;
 		double larger = max(number1, number2);
@@ -174,12 +212,37 @@ public class Calculate {
 		}
 		return(factor);
 		}
+=======
+	public static int gcf(int number1, int number2) { //lets find out
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 
+<<<<<<< HEAD
+=======
+		if(isPrime(number1 | number2) == false) {
+			while(number1 != number2) {
+				if(number1 > number2) {
+					return(number1 - number2);
+				}
+				if(number1 < number2) {
+					return(number2 - number1);
+				}
+		}
+		}
+		return(1);
+	}
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 	
+<<<<<<< HEAD
 	public static double sqrt(double number) { //a call to sqrt returns the square root of the value passed (rounded to 2 decimal places). accecpts and returns an int
 		double answer = number / 2;
 		if (number < 0) {
 			throw new IllegalArgumentException("no negative square roots"); 
+=======
+	public static double sqrt(int number) { //gonna be honest here: idk??
+		int div = number*number;
+		if(number < 0) {
+			throw new IllegalArgumentException("no square roots of negative numbers");
+>>>>>>> branch 'master' of https://github.com/henryhoover/APCS4Fall.git
 		}
 		while (((answer * answer) - number) >= .005 || ((answer * answer) - number) <= -.005) {
 			answer = 0.5 * (number / answer + answer);
