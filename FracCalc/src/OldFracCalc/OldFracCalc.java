@@ -1,7 +1,7 @@
 //Henry Wang
 //12/20/19
 //4th period
-//Calculator adds/subtracts/multiplies/divides whole numbers/mixed numbers/fractions by taking an equation as an input
+//Calculator adds/subtracts/multiplies/divides whole numbers/mixed numbers/fractions by taking an equation as an input but is now old (not OOP)
 
 package OldFracCalc;
 import java.util.Scanner;
